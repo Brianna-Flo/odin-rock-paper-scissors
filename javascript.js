@@ -1,4 +1,5 @@
-console.log("test");
+let humanScore = 0;
+let computerScore = 0;
 
 /* 
 You will write a function that randomly returns “rock”, “paper” or “scissors”. 
