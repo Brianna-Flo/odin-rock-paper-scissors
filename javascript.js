@@ -9,13 +9,34 @@ Generate a number between 1 and 3
 */
 
 function getComputerChoice() {
-    let choice = Math.floor(Math.random() * 3 + 1);
+    let num = Math.floor(Math.random() * 3 + 1);
 
-    if(choice === 1) {
+    if(num === 1) {
         return "rock";
-    } else if (choice === 2) {
+    } else if (num === 2) {
         return "paper";
     } else {
         return "scissors";
+    }
+}
+
+/* 
+    Function to get the human choice
+    prompt user to enter choice
+    check that choice is valid and convert to lower case
+    continue asking until input is valid choice
+*/
+function getHumanChoice() {
+    let humanChoice = prompt("Enter a choice", "Rock, Paper, or Scissors??");
+    while (true) {
+        if(humanChoice.toLowerCase() === "rock") {
+            return "rock";
+        } else if (humanChoice.toLowerCase() === "paper") {
+            return "paper";
+        } else if (humanChoice.toLowerCase() === "scissors") {
+            return "scissors";
+        } else {
+            humanChoice = prompt("Invalid input: enter a choice", "Rock, Paper, or Scissors??");
+        }
     }
 }
